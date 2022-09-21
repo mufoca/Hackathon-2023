@@ -362,18 +362,18 @@ hr {
     }
 
     #var-temp {
-        color: #03f0b5;
+        color: #3FB7F3;
         margin-left: 40px;
     }
 
     #var-soil-moisture {
         margin-left: 35px;
-        color: #03f0b5;
+        color: #3FB7F3;
     }
 
     #var-humidity {
         margin-left: 66px;
-        color: #03f0b5;
+        color: #3FB7F3;
     }
 
     .set-crop-text {
