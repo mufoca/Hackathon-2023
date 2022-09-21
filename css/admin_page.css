@@ -1,0 +1,602 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background-color: #1f1f2e;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+input {
+    font-family: "Poppins", sans-serif;
+}
+h1{
+    text-align: center;
+    color:#3FB7F3;
+  }
+.input-field input::placeholder {
+    color: white;
+    font-weight: 500;
+}
+
+.head-section {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: 6px;
+}
+
+.status {
+    background: #3FB7F3;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-top: 6px;
+}
+
+.login {
+    background: #3FB7F3;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-top: 6px;
+}
+
+.login:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.login:active {
+    opacity: 0.5;
+}
+
+.container1 {
+    margin: 10px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+#display-sensor {
+    width: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: #3FB7F3;
+    color: white;
+    border: 1px solid rgb(37, 66, 52);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ========live data status========= */
+.live-data {
+    background: #3FB7F3;
+    position: relative;
+    flex: 1;
+    max-width: 220px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#temp {
+    color: #ffffff;
+    /* margin-top: 11px;
+    margin-left: 11px; */
+    margin: 11px;
+    font-size: 15px;
+}
+
+#soil-moisture {
+    color: #ffffff;
+    /* margin-top: 11px;
+    margin-left: 11px; */
+    margin: 11px;
+    font-size: 15px;
+}
+
+#humidity {
+    color: #ffffff;
+    margin-top: 11px;
+    margin-left: 11px;
+    margin: 11px;
+    font-size: 15px;
+}
+
+/* =========mode settings========== */
+.force-start {
+    margin: 0;
+    background-color: #3FB7F3;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.force-start:hover {
+    opacity: 0.8;
+}
+
+.force-start:active {
+    opacity: 0.5;
+}
+
+.set-crop-text {
+    font-family: sans-serif;
+    font-size: 17.55px;
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+    text-align: center;
+    padding-right: 5px;
+}
+
+#select-crop {
+    font-family: sans-serif;
+    font-size: 17.55px;
+    background-color: #3FB7F3;
+    color: white;
+    border: 1px solid rgb(37, 66, 52);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    padding-left: 20px;
+}
+
+/* ==========add new crops========== */
+.add-crops {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.text-crops {
+    height: inherit;
+}
+
+.add-update-btn{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+button{
+    background-color: #3FB7F3;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 17.55px;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:active{
+    opacity: 0.5;
+}
+/* ==========current presets========== */
+
+#cp {
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+#var-temp {
+    color: #3FB7F3;
+    margin-left: 84px;
+}
+
+#var-soil-moisture {
+    margin-left: 70px;
+    color: #3FB7F3;
+}
+
+#var-humidity {
+    margin-left: 105px;
+    color: #3FB7F3;
+}
+
+/* =========================== */
+.range {
+    margin-left: 20px;
+    width: 300px;
+    height: 10px;
+    -webkit-appearance: none;
+    background: #1f1f2e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3FB7F3;
+    cursor: pointer;
+    border: 3px solid #333;
+    box-shadow: -407px 0 0 400px #3FB7F3;
+}
+
+/* ========================== */
+.card-01 {
+    background: #29293d;
+    position: relative;
+    flex: 1;
+    display: flex;
+    height: 40px;
+    margin: 5px;
+    max-width: 320px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    justify-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.card-02 {
+    background: #29293d;
+    position: relative;
+    flex: 1;
+    display: flex;
+    height: 40px;
+    margin: 5px;
+    max-width: 320px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+}
+
+.card-03 {
+    background: #29293d;
+    position: relative;
+    flex: 1;
+    display: flex;
+    height: 40px;
+    margin: 5px;
+    max-width: 320px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+}
+
+.card-04 {
+    background: #29293d;
+    position: relative;
+    flex: 1;
+    max-width: 460px;
+    height: 320px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    height: 1px;
+    background-color: #3d3d5c;
+    border: none;
+}
+
+/* ====================model=========================== */
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+/* ====================model=========================== */
+
+@media only screen and (min-device-width : 150px) and (max-device-width : 330px) {
+
+    #temp {
+        margin-top: 10px;
+        margin-left: 10px;
+        /*     font-size: 14px; */
+    }
+
+    #soil-moisture {
+        margin-top: 10px;
+        margin-left: 10px;
+        /*     font-size: 14px; */
+    }
+
+    #humidity {
+        margin-top: 10px;
+        margin-left: 10px;
+        /*     font-size: 14px; */
+    }
+
+    #var-temp {
+        color: #03f0b5;
+        margin-left: 40px;
+    }
+
+    #var-soil-moisture {
+        margin-left: 35px;
+        color: #03f0b5;
+    }
+
+    #var-humidity {
+        margin-left: 66px;
+        color: #03f0b5;
+    }
+
+    .set-crop-text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .range {
+        width: 250px;
+    }
+
+    .card-01 {
+        flex: 100%;
+        max-width: 230px;
+        display: flex;
+
+    }
+
+    .card-02 {
+        flex: 100%;
+        max-width: 230px;
+        display: flex;
+
+    }
+
+    .card-03 {
+        flex: 100%;
+        max-width: 230px;
+        display: flex;
+
+    }
+
+    .card-04 {
+        flex: 100%;
+        max-width: 230px;
+    }
+
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
+
+    /* Styles */
+
+    .range {
+        width: 250px;
+    }
+
+    #temp {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #soil-moisture {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #humidity {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .card-01 {
+        flex: 100%;
+        max-width: 320px;
+        display: flex;
+    }
+
+    .card-02 {
+        flex: 100%;
+        max-width: 320px;
+        display: flex;
+
+    }
+
+    .card-03 {
+        flex: 100%;
+        max-width: 320px;
+        display: flex;
+
+    }
+
+    .card-04 {
+        flex: 100%;
+        max-width: 320px;
+    }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* Styles */
+    .range {
+        width: 280px;
+    }
+
+    #temp {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #soil-moisture {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #humidity {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .card-01 {
+        flex: 100%;
+        max-width: 185px;
+        display: flex;
+
+    }
+
+    .card-02 {
+        flex: 100%;
+        max-width: 185px;
+        display: flex;
+
+    }
+
+    .card-03 {
+        flex: 100%;
+        max-width: 185px;
+        display: flex;
+
+    }
+
+    .card-04 {
+        flex: 100%;
+        max-width: 320px;
+    }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Styles */
+    #temp {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #soil-moisture {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #humidity {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+
+    .card-01 {
+        flex: 100%;
+        max-width: 190px;
+        display: flex;
+
+    }
+
+    .card-02 {
+        flex: 100%;
+        max-width: 190px;
+    }
+
+    .card-03 {
+        flex: 100%;
+        max-width: 190px;
+    }
+
+    .card-04 {
+        flex: 100%;
+        max-width: 350px;
+    }
+
+}
+
+/* Desktops and laptops ----------- */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* Styles */
+    #temp {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #soil-moisture {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #humidity {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .card-01 {
+        flex: 100%;
+        max-width: 220px;
+    }
+
+    .card-02 {
+        flex: 100%;
+        max-width: 220px;
+    }
+
+    .card-03 {
+        flex: 100%;
+        max-width: 220px;
+    }
+
+    .card-04 {
+        flex: 100%;
+        max-width: 480px;
+    }
+
+}

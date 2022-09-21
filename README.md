@@ -1,2 +1,3 @@
-# Hackathon-2022
-This is GUI for SSIP hackathon-2022 project.
+# MRP-Project
+MRP Project web site
+Link:  https://rohit4242.github.io/MRP-Project/main.html
