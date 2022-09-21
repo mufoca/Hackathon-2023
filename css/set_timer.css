@@ -33,7 +33,7 @@
   border-radius: 5px;
   border: 1px solid #bfbfbf;
   width: calc(100% / 4 - 2px);
-  background: #4EE82A;
+  background: #3FB7F3;
 }
 .content.disable .column{
   opacity: 0.6;
@@ -44,7 +44,7 @@
   height: 53px;
   border: none;
   outline: none;
-  background: #4EE82A;
+  background: #3FB7F3;
   font-size: 19px;
   color: white;
 }
@@ -58,7 +58,7 @@
   padding: 17px 0;
   margin-top: 20px;
   border-radius: 5px;
-  background: #4EE82A;
+  background: #3FB7F3;
 }
 
 
