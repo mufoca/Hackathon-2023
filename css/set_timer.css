@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root{
+  --background-color: #5cdb95;
+  --card-color: #379683;
+  --text-color: #edf5e1;
+  --button-color: #05386b;
+  --select-button-color: #05386b;
+  /* --hover-color:  */
+}
 .wrapper, .content{
   display: flex;
   align-items: center;
@@ -8,7 +16,7 @@
 .wrapper{
   width: 340px;
   padding: 30px 30px 38px;
-  background: #29293d;
+  background: var(--card-color);
   border-radius: 10px;
   flex-direction: column;
 }
@@ -32,7 +40,7 @@
   border-radius: 5px;
   border: 1px solid #bfbfbf;
   width: calc(100% / 4 - 1px);
-  background: #00cc99;
+  background: var(--select-button-color);
 }
 .content.disable .column{
   opacity: 0.6;
@@ -43,21 +51,21 @@
   height: 53px;
   border: none;
   outline: none;
-  background: #00cc99;
+  background: var(--select-button-color);
   font-size: 19px;
-  color: white;
+  color:  var(--text-color);
 }
 .wrapper button{
   width: 100%;
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 20px;
   padding: 17px 0;
   margin-top: 20px;
   border-radius: 5px;
-  background: #00cc99;
+  background: var(--button-color);
 }
 
 

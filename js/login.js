@@ -27,16 +27,9 @@ sing_in.addEventListener('click',function (e){
   
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
     // Signed in 
-
         const user = userCredential.user;
-        console.log(user);
         alert('sign-in successfully');
-        const reference = ref(db, 'users/' + user.uid);
-        set(reference, {
-          last_login: Date.now()
-        });
         location.replace("admin_page.html");
-
     })
     .catch((error) => {
         const errorCode = error.code;

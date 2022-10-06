@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root{
+  --background-color: #5cdb95;
+  --card-color: #379683;
+  --text-color: #edf5e1;
+  --button-color: #05386b;
+  --select-button-color: #05386b;
+  /* --hover-color:  */
+}
+
 /*Custom Btn*/
 .btn {
   display: inline-block;
   font-weight: 500;
   line-height: 1.5;
-  color: #212529;
+  color: var(--text-color);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -28,26 +37,26 @@
 .modal-content {
   justify-content: center;
   max-width: 350px;
-  background:#29293d;
+  background:var(--card-color);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: var(--text-color);
 
 }
 .modal-content input{
-  background-color: #00cc99;
+  background-color: var(--button-color);
   border-radius: 5px;
   font-weight: 600;
   font-size: 1.1rem;
   width: inherit;
-  color: white;
+  color: var(--text-color);
   line-height: 1;
 }
 
 .modal-content input::placeholder {
-  color: white;
+  color: var(--text-color);
   font-weight: 500;
 }
 
@@ -67,7 +76,7 @@
   justify-content: flex-end;
   justify-content: space-between;
   padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--text-color);
 }
 
 button{
@@ -78,7 +87,7 @@ button{
     display: inline-block;
     width: 100px;
     font-size: 1rem;
-    color: white;
+    color: var(--text-color);
     margin: 5px 0;
 }
 
