@@ -53,14 +53,14 @@ form {
 
 .title {
   font-size: 2.2rem;
-  color: #3FB7F3;
+  color: #00cc99;
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #3FB7F3;
+  background-color: #00cc99;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -111,9 +111,9 @@ form {
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #3FB7F3;
+  color: #00cc99;
   border-radius: 50%;
-  border: 1px solid #3FB7F3;
+  border: 1px solid #00cc99;
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
@@ -121,12 +121,12 @@ form {
 
 .social-icon:hover {
   color: white;
-  border-color: #3FB7F3;
+  border-color: #00cc99;
 }
 
 .btn {
   width: 150px;
-  background-color: #3FB7F3;
+  background-color: #00cc99;
   border: none;
   outline: none;
   height: 49px;
@@ -140,7 +140,7 @@ form {
 }
 
 .btn:hover {
-  background-color: #3FB7F3;
+  background-color: #00cc99;
   opacity: 0.8;
 }
 .btn:active{

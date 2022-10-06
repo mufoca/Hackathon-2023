@@ -6,6 +6,7 @@ import { getDatabase, ref, set,update} from "https://www.gstatic.com/firebasejs/
 const firebaseConfig = {
   apiKey: "AIzaSyCd-ZXpym75WVSQp9_mTzlTmt2_4ptJtGs",
   authDomain: "hackathon-2022-81f7b.firebaseapp.com",
+  databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com",
   projectId: "hackathon-2022-81f7b",
   storageBucket: "hackathon-2022-81f7b.appspot.com",
   messagingSenderId: "466349206375",
@@ -31,7 +32,7 @@ sing_in.addEventListener('click',function (e){
         console.log(user);
         alert('sign-in successfully');
         const reference = ref(db, 'users/' + user.uid);
-        update(reference, {
+        set(reference, {
           last_login: Date.now()
         });
         location.replace("admin_page.html");

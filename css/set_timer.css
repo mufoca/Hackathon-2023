@@ -11,7 +11,6 @@
   background: #29293d;
   border-radius: 10px;
   flex-direction: column;
-  /* box-shadow: 0 10px 25px rgba(0,0,0,0.1); */
 }
 .wrapper img{
   max-width: 103px;
@@ -29,11 +28,11 @@
   cursor: no-drop;
 }
 .content .column{
-  padding: 0 10px;
+  padding: 0 5px;
   border-radius: 5px;
   border: 1px solid #bfbfbf;
-  width: calc(100% / 4 - 2px);
-  background: #3FB7F3;
+  width: calc(100% / 4 - 1px);
+  background: #00cc99;
 }
 .content.disable .column{
   opacity: 0.6;
@@ -44,7 +43,7 @@
   height: 53px;
   border: none;
   outline: none;
-  background: #3FB7F3;
+  background: #00cc99;
   font-size: 19px;
   color: white;
 }
@@ -58,7 +57,7 @@
   padding: 17px 0;
   margin-top: 20px;
   border-radius: 5px;
-  background: #3FB7F3;
+  background: #00cc99;
 }
 
 
@@ -66,7 +65,7 @@
 and (min-device-width : 150px) and (max-device-width : 300px){
 /* Styles */
 .wrapper{
-    width: 180px;
+    width: 200px;
 }
 }
 
@@ -77,7 +76,7 @@ and (min-device-width : 300px)
 and (max-device-width : 480px) {
 /* Styles */
 .wrapper{
-    width: 260px;
+    width: 280px;
 }
 }
 
@@ -85,18 +84,22 @@ and (max-device-width : 480px) {
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
 .wrapper{
-  width: 260px;
+  width: 300px;
 }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px){
 /* Styles */
+.wrapper{
+  width: 400px;
+}
 
 }
 
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) and (max-width: 1280px) {
-
-
+  .wrapper{
+    width: 400px;
+  }
 }

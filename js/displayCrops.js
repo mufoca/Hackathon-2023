@@ -4,13 +4,14 @@ import { getDatabase, ref,onValue,push,set,update} from "https://www.gstatic.com
 const firebaseConfig = {
     apiKey: "AIzaSyCd-ZXpym75WVSQp9_mTzlTmt2_4ptJtGs",
     authDomain: "hackathon-2022-81f7b.firebaseapp.com",
+    databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com",
     projectId: "hackathon-2022-81f7b",
     storageBucket: "hackathon-2022-81f7b.appspot.com",
     messagingSenderId: "466349206375",
     appId: "1:466349206375:web:3fa656e4ebfe8c79181dc2",
-    databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com/"
+    databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com"
+  };
 
-};
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);

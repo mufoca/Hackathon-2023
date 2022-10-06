@@ -8,7 +8,7 @@ body{
 }
 h1{
   text-align: center;
-  color:#3FB7F3;
+  color:#00cc99;
 }
 .head-section{
   display: flex;
@@ -20,7 +20,7 @@ h1{
   margin: 6px;
 }
 .status{
-  background: #3FB7F3;
+  background: #00cc99;
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -33,7 +33,7 @@ h1{
 }
 
 .login{
-  background:#3FB7F3;
+  background:#00cc99;
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -64,10 +64,10 @@ h1{
   font-size: 12px;
 }
 #display-sensor{
-  width: 20px;
+  width: 120px;
   font-family:sans-serif;
   font-size: 15px;
-  background-color:#3FB7F3;
+  background-color:#00cc99;
   color: white;
   border: 1px solid rgb(37, 66, 52);
   border-radius: 5px;
@@ -75,7 +75,7 @@ h1{
 }
 /* ========live data status========= */
 .live-data{
-  background: #3FB7F3;
+  background: #03D29F;
   position: relative;
   flex: 1;
   max-width: 220px;
@@ -113,7 +113,7 @@ h1{
 /* =========mode settings========== */
 .force-start{
   margin: 0;
-  background-color: #3FB7F3;
+  background-color: #00cc99;
   color: white;
   border: none;
   height: 40px;
@@ -132,7 +132,7 @@ h1{
 
 .switch-mode{
   margin: 0;
-  background-color: #3FB7F3;
+  background-color: #00cc99;
   color: white;
   border: none;
   height: 40px;
@@ -161,7 +161,7 @@ h1{
 #select-crop{
   font-family:sans-serif;
   font-size: 17.55px;
-  background-color:#3FB7F3;
+  background-color:#00cc99;
   color: white;
   border: 1px solid rgb(37, 66, 52);
   border-radius: 5px;
@@ -179,11 +179,11 @@ a{
   text-decoration: none;
 }
 a:hover{
-  color:#3FB7F3;
+  color:#00cc99;
   cursor: pointer;
 }
 a:active{
-  color: #3FB7F3;
+  color: rgb(32, 240, 143);
 }
 
 /* ==========current presets========== */
@@ -199,16 +199,16 @@ a:active{
 }
 
 #var-temp{
-  color: #3FB7F3;
+  color: #03f0b5;
   margin-left: 84px;
 }
 #var-soil-moisture{
   margin-left: 70px;
-  color: #3FB7F3;
+  color: #03f0b5;
 }
 #var-humidity{
   margin-left: 105px;
-  color: #3FB7F3;
+  color: #03f0b5;
 }
 /* ========================== */
 .card-01{
@@ -289,16 +289,16 @@ hr{
   }
   
   #var-temp{
-    color: #3FB7F3;
+    color: #03f0b5;
     margin-left: 40px;
   }
   #var-soil-moisture{
     margin-left: 35px;
-    color: #3FB7F3;
+    color: #03f0b5;
   }
   #var-humidity{
     margin-left: 66px;
-    color: #3FB7F3;
+    color: #03f0b5;
   }
   .set-crop-text{
     padding-left: 20px;
@@ -307,6 +307,7 @@ hr{
   .card-01{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -314,6 +315,7 @@ hr{
   .card-02{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -321,6 +323,7 @@ hr{
   .card-03{
     flex: 100%;
     max-width: 230px;
+    height: 50px;
     display: flex;
 
   }
@@ -339,15 +342,15 @@ and (min-device-width : 300px)
 and (max-device-width : 480px) {
 /* Styles */
 #temp{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #soil-moisture{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #humidity{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -371,7 +374,7 @@ and (max-device-width : 480px) {
 }
 .card-04{
   flex: 100%;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 }
@@ -379,16 +382,19 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media (min-width: 481px) and (max-width: 767px) {
 /* Styles */
+#display-sensor{
+  width: 20px;
+}
 #temp{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #soil-moisture{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #humidity{
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -414,7 +420,7 @@ and (max-device-width : 480px) {
 }
 .card-04{
   flex: 100%;
-  max-width: 320px;
+  max-width: 360px;
 }
 
 }
@@ -422,6 +428,9 @@ and (max-device-width : 480px) {
 /* iPads (portrait and landscape) ----------- */
 @media (min-width: 768px) and (max-width: 1024px){
 /* Styles */
+#display-sensor{
+  width: 20px;
+}
 #temp{
   margin-top: 10px;
   margin-left: 10px;
@@ -434,8 +443,21 @@ and (max-device-width : 480px) {
   margin-top: 10px;
   margin-left: 10px;
 }
+#cp{
+  padding-left: 50px;
+  color: white;
+  font-size:20px;
+}
 
-
+.set-crop-text{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-size: 20px;
+  width: 120px;
+}
 .card-01{
   flex: 100%;
   max-width: 190px;
@@ -454,7 +476,7 @@ and (max-device-width : 480px) {
 }
 .card-04{
   flex: 100%;
-  max-width: 400px;
+  max-width: 470px;
 }
 
 }
@@ -462,6 +484,9 @@ and (max-device-width : 480px) {
 /* Desktops and laptops ----------- */
 @media (min-width: 1025px) and (max-width: 1280px) {
 /* Styles */
+#display-sensor{
+  width: 20px;
+}
 #temp{
   margin-top: 10px;
   margin-left: 10px;
@@ -473,6 +498,21 @@ and (max-device-width : 480px) {
 #humidity{
   margin-top: 10px;
   margin-left: 10px;
+}
+#cp{
+  padding-left: 50px;
+  color: white;
+  font-size:20px;
+}
+
+.set-crop-text{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#select-crop{
+  font-size: 20px;
+  width: 120px;
 }
 
 .card-01{

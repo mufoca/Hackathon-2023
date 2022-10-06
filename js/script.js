@@ -1,73 +1,63 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+import { getDatabase, ref,set,update} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
 
-function startStop1()
-{
-    let btn = document.getElementById('start-stop');
-    let status = document.getElementById('motor-status');
+const firebaseConfig = {
+    apiKey: "AIzaSyCd-ZXpym75WVSQp9_mTzlTmt2_4ptJtGs",
+    authDomain: "hackathon-2022-81f7b.firebaseapp.com",
+    databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com",
+    projectId: "hackathon-2022-81f7b",
+    storageBucket: "hackathon-2022-81f7b.appspot.com",
+    messagingSenderId: "466349206375",
+    appId: "1:466349206375:web:3fa656e4ebfe8c79181dc2",
+    databaseURL: "https://hackathon-2022-81f7b-default-rtdb.firebaseio.com"
+  };
 
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+let btn = document.getElementById('start-stop');
+let status = document.getElementById('motor-status');
+
+btn.addEventListener('click',()=>{
     if(btn.innerHTML === "Force Start"){
         btn.innerHTML = "Force Stop";
         status.innerHTML = "ON";
-        status.style = "color:#FF1A01";
-        btn.style = "background-color:#FF1A01";
+        status.style = "color:#009933";
+        const reference = ref(db, 'Motor Status/');
+        update(reference, {
+           motor_status:true
+        });
+        console.log("Your Motor is ON");
+        sendNotification("Motor Status",`Motor is ON`,"","Motor Status");
     }
     else{
         btn.innerHTML = "Force Start";
         status.innerHTML = "OFF";
         status.style = "color: #ff0000";
-        btn.style = "background-color:#4EE82A";
-
+        const reference = ref(db, 'Motor Status/');
+        update(reference, {
+           motor_status:false
+        });
+        console.log("Your Motor is OFF");
+        sendNotification("Motor Status",`Motor is OFF`,"","Motor Status");
     }
-}
-function startStop2()
-{
-    let btn = document.getElementById('start-stop');
-    let status = document.getElementById('motor-status');
+});
 
-    if(btn.innerHTML === "Force Start"){
-        btn.innerHTML = "Force Stop";
-        status.innerHTML = "ON";
-        status.style = "color:#FF1A01";
-        btn.style = "background-color:#FF1A01";
+setInterval(() => {
+    if(status.innerText == 'ON')
+    {
+        const reference = ref(db, 'Motor Status/');
+        update(reference, {
+            motor_status:true
+        });
     }
     else{
-        btn.innerHTML = "Force Start";
-        status.innerHTML = "OFF";
-        status.style = "color: #ff0000";
-        btn.style = "background-color:#3FB7F3";
-
+        const reference = ref(db, 'Motor Status/');
+        update(reference, {
+            motor_status:false
+        });
     }
-}
-// function switchMode(){
-//   let btn = document.getElementById('switch-mode');
-//   let range1 = document.getElementById("range1");
-//   let range2 = document.getElementById("range2");
-//   let range3 = document.getElementById("range3");
-//   let cp = document.getElementById('cp');
-//   if(btn.innerHTML === "Switch To Manual Mode")
-//   {
-//     btn.innerHTML = "Switch To Automatic Mode";
-//     document.getElementById('current-preset').innerHTML = "Recommended Preset";
-//     range1.disabled = true;
-//     range2.disabled = true;
-//     range3.disabled = true;
-//     range1.style.display = 'none';
-//     range2.style.display = 'none';
-//     range3.style.display = 'none';
-//     cp.style.paddingTop = '30px';
-//   }
-//   else{
-//     btn.innerHTML = "Switch To Manual Mode";
-//     document.getElementById('current-preset').innerHTML = "Current Preset";
-//     range1.disabled = false;
-//     range2.disabled = false;
-//     range3.disabled = false;
-//     range1.style.display = 'block';
-//     range2.style.display = 'block';
-//     range3.style.display = 'block';
-//     cp.style.paddingTop = '0';
-
-//   }
-// }
+}, 1000);
 
 let login = document.getElementById("login-btn");
 
